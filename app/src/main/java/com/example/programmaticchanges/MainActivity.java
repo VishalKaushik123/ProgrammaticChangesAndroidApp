@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -19,9 +20,11 @@ public class MainActivity extends AppCompatActivity {
     TextView labelTV;
     ConstraintLayout myLayout;
     ImageView starImage;
+    TextView testTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -49,7 +52,8 @@ public class MainActivity extends AppCompatActivity {
         switch (v.getId()) {
             case R.id.colorButton:
                 buttonName = "colorButton";
-                // do something
+                testTextView = findViewById(R.id.testView);
+                testTextView.setText("Hi");
                 break;
             case R.id.otherButton:
                 // do something
